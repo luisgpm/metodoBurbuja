@@ -35,7 +35,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author luisg
  */
-public class BurbujaPrueba extends javax.swing.JFrame {
+public class Frame extends javax.swing.JFrame {
 
     MetodoBurbuja burbuja = new MetodoBurbuja();
     DefaultTableModel modelo;
@@ -44,7 +44,7 @@ public class BurbujaPrueba extends javax.swing.JFrame {
     /**
      * Creates new form BurbujaPrueba
      */
-    public BurbujaPrueba() {
+    public Frame() {
         initComponents();
         setLocationRelativeTo(null);
         modelo = (DefaultTableModel) jTable1.getModel();
@@ -186,7 +186,7 @@ public class BurbujaPrueba extends javax.swing.JFrame {
             BtnPedirNumeros.setEnabled(false);
             btnLimpiador.setEnabled(true);
         } catch (InterruptedException ex) {
-            Logger.getLogger(BurbujaPrueba.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Frame.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btnMayorMenorActionPerformed
 
@@ -241,7 +241,7 @@ public class BurbujaPrueba extends javax.swing.JFrame {
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
-        /*
+        
         try {
             
             //javax.swing.UIManager.setLookAndFeel(new AcrylLookAndFeel());
@@ -251,7 +251,7 @@ public class BurbujaPrueba extends javax.swing.JFrame {
             //javax.swing.UIManager.setLookAndFeel(new FastLookAndFeel());
             //***************************
             //javax.swing.UIManager.setLookAndFeel(new GraphiteLookAndFeel());
-            //javax.swing.UIManager.setLookAndFeel(new HiFiLookAndFeel());
+            javax.swing.UIManager.setLookAndFeel(new HiFiLookAndFeel());
             //***********
             //javax.swing.UIManager.setLookAndFeel(new LunaLookAndFeel());
             //*****
@@ -265,14 +265,14 @@ public class BurbujaPrueba extends javax.swing.JFrame {
             //javax.swing.UIManager.setLookAndFeel(new NoireLookAndFeel());
             //******
             //javax.swing.UIManager.setLookAndFeel(new SmartLookAndFeel());
-            javax.swing.UIManager.setLookAndFeel(new TextureLookAndFeel());
+            //javax.swing.UIManager.setLookAndFeel(new TextureLookAndFeel());
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(BurbujaPrueba.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Frame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         
-        */
-        //</editor-fold>
         
+        //</editor-fold>
+        /*
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -281,19 +281,19 @@ public class BurbujaPrueba extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(BurbujaPrueba.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Frame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(BurbujaPrueba.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Frame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(BurbujaPrueba.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Frame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(BurbujaPrueba.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Frame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        
+        */
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new BurbujaPrueba().setVisible(true);
+                new Frame().setVisible(true);
             }
         });
     }

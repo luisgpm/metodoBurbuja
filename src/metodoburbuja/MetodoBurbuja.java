@@ -29,6 +29,7 @@ public class MetodoBurbuja extends Thread {
     static int checador = 0;
     static boolean bandera = false;
     static int numeros[];
+    
     static public int[] pedirNumeros(int numeros[],int cantidad) {
 
         numeros = new int[cantidad];
@@ -41,6 +42,7 @@ public class MetodoBurbuja extends Thread {
     }
 
     static public int[] OrdenarMayorMenorConsola(int[] arr) {
+        int contador = 0;
 
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr.length - 1; j++) {
@@ -49,14 +51,16 @@ public class MetodoBurbuja extends Thread {
                     arr[j + 1] = arr[j];
                     arr[j] = aux;
                     aux = 0;
+                    contador++;
                     //System.err.print(arr[j] + "<" + arr[j + 1]);
-                    System.out.println(ANSI_GREEN + arr[j] + "<" + arr[j + 1]);
+                    System.out.println(ANSI_GREEN + "proceso "+contador+":  " +arr[j] + "<" + arr[j + 1]);
                     for (int k = 0; k < arr.length; k++) {
                         System.out.print(ANSI_RESET + arr[k]);
                     }
                     System.out.println("");
                 } else {
-                    System.out.print(ANSI_RED + arr[j] + "<" + arr[j + 1]);
+                    contador++;
+                    System.out.print(ANSI_RED + "proceso "+contador+":  " +arr[j] + "<" + arr[j + 1]);
                     System.out.println("");
                     for (int k = 0; k < arr.length; k++) {
                         System.out.print(arr[k]);
@@ -69,7 +73,7 @@ public class MetodoBurbuja extends Thread {
     }
 
     static public int[] OrdenarMenorMayorConsola(int arr[]) {
-        int contador = 1;
+        int contador = 0;
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr.length - 1; j++) {
                 if (arr[j] > arr[j + 1]) {
@@ -77,15 +81,17 @@ public class MetodoBurbuja extends Thread {
                     arr[j + 1] = arr[j];
                     arr[j] = aux;
                     aux = 0;
+                    contador++;
                     //System.err.print(arr[j] + "<" + arr[j + 1]);
-                    System.out.println(ANSI_GREEN + arr[j] + ">" + arr[j + 1]);
+                    System.out.println(ANSI_GREEN + "proceso "+contador+":  " +arr[j] + ">" + arr[j + 1]);
                     for (int k = 0; k < arr.length; k++) {
                         System.out.print(ANSI_RESET + arr[k]);
                     }
 
                     System.out.println("");
                 } else {
-                    System.out.print(ANSI_RED + arr[j] + ">" + arr[j + 1]);
+                    contador++;
+                    System.out.print(ANSI_RED + "proceso "+contador+":  " +arr[j] + ">" + arr[j + 1]);
                     System.out.println("");
                     for (int k = 0; k < arr.length; k++) {
                         System.out.print(arr[k]);
